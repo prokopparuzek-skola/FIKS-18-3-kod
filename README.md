@@ -41,10 +41,11 @@ je shodná s první skupinou, tj. `1001`.
 Rozeberu postupně všechny možnosti.\
 1. Druhá skupina musí být správně, jelikož vzdálenost známých bitů od sebe je menší než k, konkrétně jeho polovina. 
    A tudíž pokud by nastala chyba mezi nimi musela by se nutně projevit na druhém ze známých bitů.\
-2. Druhý případ je podobný prvnímu s tím rozdílem, že vše je negované, takže i druhá skupina musí být negována.\
+2. Druhý případ je podobný prvnímu s tím rozdílem, že vše je negované, takže i druhá skupina musí být negována. Aby 
+   vznikla správná posloupnost bitů.\
 3. Pokud je první kontrolní bit správně a druhý špatně, musela nastat chyba někde mezi nimi, a protože nastala mezi nimi 
    předchozí chyba musela nastat před prvním bitem daného bloku, konec je od začátku vzdálen přesně (k - 1). Tudíž 
    správná posloupnost bitů je ta první.\
-4. U posledního případu musela chyba nastat též mezi prvním a druhým bitem, pouze s tím rozdílem, že vrátila komunikaci 
-   do normálního stavu, tj. komunikace před ní byla negována. Takže správná posloupnost bitů vznikne negováním první 
-	   skupiny.
+4. U posledního případu musela chyba nastat též mezi prvním a druhým kontrolním bitem, pouze s tím rozdílem, že vrátila 
+   komunikaci do normálního stavu, tj. komunikace před ní byla negována. Takže správná posloupnost bitů vznikne 
+   negováním první skupiny.
